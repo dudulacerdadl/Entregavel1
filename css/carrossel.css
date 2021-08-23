@@ -1,0 +1,59 @@
+.js .slider{
+    overflow: hidden;
+}
+
+.js .slider .slideshow{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    max-width: 950px;
+}
+
+.js .slider figure {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.js .slider figure.show {
+    opacity: 1;
+    position: static;
+}
+
+.js .slider .prev, .js .slider .next {
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+.js .slider .prev {
+    left: 10px;
+}
+
+.js .slider .next {
+    right: 10px;
+}
+
+.js .slider .prev img {
+    width: 3em;
+}
+
+.js .slider .next img {
+    width: 3em;
+}
+
+.js .slider figure img {
+    width: 80%;
+    margin-left: calc(50% - 80%/2);
+}
+
+@media screen and (min-width: 1024px) {
+    .js .slider figure img {
+        width: 25em;
+        margin-left: calc(50% - 25em/2);
+    }
+
+}

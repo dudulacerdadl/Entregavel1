@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-image: linear-gradient(transparent, black), url(images/bg.jpg);
+    background-image: linear-gradient(transparent, black), url(../images/bg.jpg);
     background-size: cover;
     background-position: bottom;
     background-attachment: scroll, fixed;
@@ -56,7 +56,7 @@ header {
 }
 
 .slider img {
-    width: 25em;
+    border-radius: 10px;
 }
 
 .slideshow {
@@ -98,6 +98,7 @@ header {
     border: 1px solid;
     border-radius: 10px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 footer {
@@ -132,5 +133,17 @@ footer li {
 }
 
 @media screen and (min-width: 1024px) {
-    
+    .body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main {
+        width: 65vw;
+    }
+
+    .form {
+        border-left: 2px solid black;
+        padding: 5vw;
+    }
 }
