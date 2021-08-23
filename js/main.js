@@ -15,7 +15,5 @@ var carousel = new Carousel({
 $body.addEventListener('click', () => {
     if ($email.value != '' && $name.value != '') {
         alert('Registo efetuado com sucesso!');
-    } else {
-        alert('Digite o e-mail e nome corretamente!')
     }
 });
