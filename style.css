@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: wheat;
+    background-color: rgb(255, 255, 95);
 }
 
 header {
@@ -48,7 +48,7 @@ header {
 }
 
 .slider {
-    background-color: rgb(255, 208, 122);
+    background-color: #ccc;
     padding: 15px;
     box-sizing: border-box;
     width: 100%;
@@ -67,6 +67,70 @@ header {
     display: inline-block;
 }
 
+.form-title {
+    padding: 1em;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    background-color: rgb(180, 180, 0);
+}
+
+.form-container {
+    padding: 2%;
+    box-sizing: border-box;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgb(180, 180, 0);
+}
+
+.form-label {
+    font-size: 1.25em;
+}
+
+.form-label input {
+    display: block;
+    width: 100%;
+}
+
+.btn {
+    background-color: rgb(255, 255, 95);
+    display: block;
+    padding: 1em 2em;
+    border: 1px solid;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
 footer {
-    background-color: #555;
+    background-color: #222;
+    color: white;
+    padding: 10px 0;
+}
+
+footer ul {
+    list-style: none;
+    text-align: center;
+}
+
+footer li {
+    display: inline;
+    padding: 0 20px;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 1.25em;
+    font-style: italic;
+}
+
+.footer-links img {
+    filter: invert(0%);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.footer-links img:hover {
+    filter: invert(50%);
+}
+
+@media screen and (min-width: 1024px) {
+    
 }
