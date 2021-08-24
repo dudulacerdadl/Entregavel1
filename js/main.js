@@ -12,14 +12,42 @@ var carousel = new Carousel({
     btnNext: '.next'
 });
 
+
 $btn.addEventListener('click', () => {
-    if ($email.value == '' && $name.value == '') {
-        alert('Preencha os campos corretamente')
-    } else if ($email.value == '') {
-        alert('Preencha o campo de e-mail corretamente!');
-    } else if ($name.value == '') {
-        alert('Preencha o campo do nome corretamente!');
+    var email = $email.value.split('');
+    var cont = 0;
+
+    if ($email.value == '' || $name.value == '') {
+        alert('Preencha os campos corretamente!');
     } else {
-        alert('Cadastro realizado corretamente')
+        var arr = false
+        
+        for (let i = 1; i < email.length; i++) {
+            if (email[i] == '@') {
+                arr = true
+            }
+        }
+
+        if (arr) {
+            var aux = '';
+
+            for (let j = (email.length - 5); j < email.length; j++) {
+                if (cont == 0) {
+                    email[j] == '@' ? aux = 'ERRO' : aux = '';
+                    cont ++;
+                } else {
+                    aux += email[j];
+                }
+                console.log(aux)
+            }
+            if (aux != '.com' && aux) {
+                alert('Preencha o e-mail corretamente!');
+            } else {
+                alert('Cadastro realizado corretamente')
+            }
+            
+        } else {
+            alert('Preencha o e-mail corretamente!')
+        }
     }
 });
