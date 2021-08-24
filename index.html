@@ -39,24 +39,22 @@
             </div>
         </main>
 
-        <section class="form">
+        <form class="form" action="#" method="GET">
             <h3 class="form-title">Faça parte da nossa equipe:</h3>
-            <div class="container">
-                <div class="form-container">
-                    <label class="form-label">
-                        Digite seu Nome Completo:
-                        <input type="text" id="name" placeholder="digite aqui">
-                    </label>
-                    <br>
-                    <label class="form-label">
-                        Digite seu E-mail:
-                        <input type="email" id="email" placeholder="digite aqui">
-                    </label>
-                    <br>
-                    <button class="btn">Enviar</button>
-                </div>
-            </div>
-        </section>
+            <fieldset class="container form-container">
+                <label class="form-label">
+                    Digite seu Nome Completo:
+                    <input type="text" id="name" required placeholder="digite aqui">
+                </label>
+                <br>
+                <label class="form-label">
+                    Digite seu E-mail:
+                    <input type="email" id="email" required placeholder="digite aqui">
+                </label>
+                <br>
+                <input type="submit" value="Enviar" class="btn">
+            </fieldset>
+        </form>
     </div>
 
     <footer>

@@ -1,9 +1,9 @@
-var $body = document.querySelector('body');
-var $btn = document.querySelector('.btn');
-var $name = document.querySelector('#name');
-var $email = document.querySelector('#email');
-$body.classList.remove('no-js');
-$body.classList.add('js');
+var body = document.querySelector('body');
+var btn = document.querySelector('.btn');
+var nome = document.querySelector('#name');
+var email = document.querySelector('#email');
+body.classList.remove('no-js');
+body.classList.add('js');
 
 var carousel = new Carousel({
     container: '.slider .slideshow',
@@ -12,42 +12,20 @@ var carousel = new Carousel({
     btnNext: '.next'
 });
 
+btn.addEventListener('click', function () {
+    // Fonte do Regex: https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
+    const e = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const isValid = e.test(email.value);
 
-$btn.addEventListener('click', () => {
-    var email = $email.value.split('');
-    var cont = 0;
-
-    if ($email.value == '' || $name.value == '') {
-        alert('Preencha os campos corretamente!');
-    } else {
-        var arr = false
-        
-        for (let i = 1; i < email.length; i++) {
-            if (email[i] == '@') {
-                arr = true
-            }
-        }
-
-        if (arr) {
-            var aux = '';
-
-            for (let j = (email.length - 5); j < email.length; j++) {
-                if (cont == 0) {
-                    email[j] == '@' ? aux = 'ERRO' : aux = '';
-                    cont ++;
-                } else {
-                    aux += email[j];
-                }
-                console.log(aux)
-            }
-            if (aux != '.com' && aux) {
-                alert('Preencha o e-mail corretamente!');
-            } else {
-                alert('Cadastro realizado corretamente')
-            }
+    if (!isValid) {
+        email.setCustomValidity('');
             
+        if (email.validity.valueMissing) {
+            email.setCustomValidity('Digite seu e-mail aqui');
         } else {
-            alert('Preencha o e-mail corretamente!')
+            email.setCustomValidity('Email inválido. Digite um e-mail como o exemplo: 12345@exemplo.com');
         }
+    } else {
+        email.setCustomValidity('');
     }
 });
