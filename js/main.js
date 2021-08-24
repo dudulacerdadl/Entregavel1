@@ -14,7 +14,9 @@ var carousel = new Carousel({
 
 btn.addEventListener('click', function () {
     // Fonte do Regex: https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
-    const e = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    // const e = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    const e = /[a-z0-9.]*@[a-z0-9]*\.[a-z\.]*/
     const isValid = e.test(email.value);
 
     if (!isValid) {
