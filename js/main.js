@@ -12,8 +12,14 @@ var carousel = new Carousel({
     btnNext: '.next'
 });
 
-$body.addEventListener('click', () => {
-    if ($email.value != '' && $name.value != '') {
-        alert('Registo efetuado com sucesso!');
+$btn.addEventListener('click', () => {
+    if ($email.value == '' && $name.value == '') {
+        alert('Preencha os campos corretamente')
+    } else if ($email.value == '') {
+        alert('Preencha o campo de e-mail corretamente!');
+    } else if ($name.value == '') {
+        alert('Preencha o campo do nome corretamente!');
+    } else {
+        alert('Cadastro realizado corretamente')
     }
 });
