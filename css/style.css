@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(255, 255, 95);
+    background-color: #fcf5c7;
 }
 
 header {
@@ -25,7 +25,7 @@ header {
 
 .header-container h1 {
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-    color: yellow;
+    color: #ffc09f;
     font-size: 3em;
 }
 
@@ -74,29 +74,30 @@ header {
     padding: 1em;
     font-size: 1.5em;
     margin-bottom: 10px;
-    background-color: rgb(180, 180, 0);
 }
 
 .form-container {
+    text-align: center;
     padding: 2%;
     box-sizing: border-box;
-    border: 3px solid black;
+    border: none;
     border-radius: 10px;
-    background-color: rgb(180, 180, 0);
+    background-color: #ffee93;
 }
 
 .form-label {
+    display: block;
     font-size: 1.25em;
 }
 
 .form-label input {
     display: block;
-    width: 100%;
+    width: 98%;
 }
 
 .btn {
     background-color: rgb(255, 255, 95);
-    display: block;
+    display: inline-block;
     padding: 1em 2em;
     border: 1px solid;
     border-radius: 10px;
@@ -140,17 +141,8 @@ footer li {
 }
 
 @media screen and (min-width: 1024px) {
-    .body {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .main {
-        width: 65vw;
-    }
-
-    .form {
-        border-left: 2px solid black;
-        padding: 5vw;
+    .form-label input {
+        display: inline-block;
+        width: 20%;
     }
 }
